@@ -19,7 +19,6 @@ class AbstractMacro extends AsyncCommand implements IMacro {
 
     @postConstruct
     public function initialize():Void {
-        trace('initalize');
         this.injector = injector.createChild();
 
         prepare();
@@ -49,8 +48,6 @@ class AbstractMacro extends AsyncCommand implements IMacro {
 
     private function executeCommand(mapping:ISubCommandMapping):Void {
         var command:ICommand = null;
-
-        trace('executing: ${mapping.commandClass}');
 
         var commandClass:Class<Dynamic> = mapping.commandClass;
         var payloads:Array<SubCommandPayload> = mapping.payloads;
