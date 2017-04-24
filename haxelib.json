@@ -1,0 +1,21 @@
+{
+  "name": "robotlegs-macrobot",
+  "url": "https://github.com/mayakwd/openfl-robotlegs-macrobot/openfl-robotlegs-macrobot",
+  "license": "MIT",
+  "tags": [
+    "robotlegs",
+    "commands",
+    "openfl"
+  ],
+  "description": "Macro command utility for Robotlegs which provides the ability to execute batches of commands in sequential or parallel fashion.",
+  "version": "0.1.0",
+  "releasenote": "Alpha release",
+  "contributors": [
+    "mayakwd"
+  ],
+  "dependencies": {
+    "openfl": "",
+    "robotlegs": ""
+  },
+  "classPath": "src/"
+}
