@@ -8,8 +8,8 @@
     "openfl"
   ],
   "description": "Macro command utility for Robotlegs which provides the ability to execute batches of commands in sequential or parallel fashion.",
-  "version": "0.1.1",
-  "releasenote": "Removed traces",
+  "version": "0.1.2",
+  "releasenote": "Fixed url",
   "contributors": [
     "mayakwd"
   ],
