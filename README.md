@@ -97,8 +97,6 @@ class DailyRoutine extends SequenceMacro {
     }
 }
 
-@:keep
-@:rtti
 class IsFriday implements IHook {
     @inject public var me:Person;
 	
@@ -123,9 +121,7 @@ class Macro extends SequenceMacro {
     }
 }
 
-@:keep
-@:rtti
-class Action implements ICommand {
+class Action implements ICommand implements DescribedType {
     @inject public var data:SomeModel;
 	
     public function execute():Void {
@@ -144,9 +140,7 @@ class Macro extends SequenceMacro {
     }
 }
 
-@:keep
-@:rtti
-class Action implements ICommand {
+class Action implements ICommand implements DescribedType {
     @inject('mydata') public var data:IModel;
 	
     public function execute():Void {
