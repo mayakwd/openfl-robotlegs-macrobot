@@ -31,5 +31,4 @@ package robotlegs.bender.extensions.asyncCommands.impl;
     private function get_type():Class<Dynamic> {
         return type == null ? Type.getClass(data) : type;
     }
-
 }

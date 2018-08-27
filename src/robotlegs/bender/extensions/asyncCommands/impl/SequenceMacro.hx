@@ -2,7 +2,7 @@ package robotlegs.bender.extensions.asyncCommands.impl;
 import robotlegs.bender.extensions.asyncCommands.api.ISubCommandMapping;
 
 class SequenceMacro extends AbstractMacro {
-    @:isVar public var atomic(default, set):Bool = true;
+    public var atomic(default, set):Bool = true;
 
     private var running:Bool = false;
     private var success:Bool = true;

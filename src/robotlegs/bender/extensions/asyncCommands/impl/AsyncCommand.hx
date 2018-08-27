@@ -1,12 +1,15 @@
 package robotlegs.bender.extensions.asyncCommands.impl;
+import org.swiftsuspenders.utils.DescribedType;
 import robotlegs.bender.extensions.asyncCommands.api.IAsyncCommand;
 import robotlegs.bender.framework.api.IContext;
-@:rtti
+
 @:keepSub
-class AsyncCommand implements IAsyncCommand {
+class AsyncCommand implements IAsyncCommand implements DescribedType {
     @inject public var context:IContext;
 
     private var completeListeners:Array<Bool -> Void>;
+
+    public function new() {}
 
     public function onComplete(completeCallback:Bool -> Void):Void {
         if (completeListeners == null) {
@@ -17,11 +20,11 @@ class AsyncCommand implements IAsyncCommand {
     }
 
     public function execute():Void {
-        context.detain([this]);
+        context.detain(this);
     }
 
     private function dispatchComplete(success:Bool):Void {
-        context.release([this]);
+        context.release(this);
 
         if (completeListeners != null) {
             for (listener in completeListeners) {

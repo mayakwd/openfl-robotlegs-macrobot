@@ -7,7 +7,7 @@ import robotlegs.bender.extensions.commandCenter.api.ICommand;
     private var mappings:Array<ISubCommandMapping>;
     private var mappingByCommand:Map<String, Array<ISubCommandMapping>>;
 
-    public function new() {
+    public inline function new() {
         clear();
     }
 

@@ -6,11 +6,11 @@ import robotlegs.bender.framework.api.IInjector;
 @:keepSub
 class SubCommandMapping implements ISubCommandMapping implements ISubCommandConfigurator {
     public var commandClass(default, null):Class<Dynamic>;
-    @:isVar public var executeMethod(default, null):String = 'execute';
+    public var executeMethod(default, null):String = 'execute';
 
-    @:isVar public var guards(default, null):Array<Dynamic> = [];
-    @:isVar public var payloads(default, null):Array<SubCommandPayload> = [];
-    @:isVar public var hooks(default, null):Array<Dynamic> = [];
+    public var guards(default, null):Array<Dynamic> = [];
+    public var payloads(default, null):Array<SubCommandPayload> = [];
+    public var hooks(default, null):Array<Dynamic> = [];
 
     public inline function new(commandClass:Class<Dynamic>) {
         this.commandClass = commandClass;
