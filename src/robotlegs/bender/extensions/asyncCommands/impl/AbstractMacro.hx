@@ -11,17 +11,15 @@ import robotlegs.bender.framework.api.IInjector;
 import robotlegs.bender.framework.impl.ApplyHooks;
 import robotlegs.bender.framework.impl.GuardsApprove;
 
-@:keepSub
 class AbstractMacro extends AsyncCommand implements IMacro {
     @inject public var injector:IInjector;
 
     private var mappings:SubCommandMappingList = new SubCommandMappingList();
 
-    @postConstruct
-    public function initialize():Void {
+    override public function execute():Void {
         this.injector = injector.createChild();
-
         prepare();
+        super.execute();
     }
 
     public function prepare():Void {
@@ -62,9 +60,7 @@ class AbstractMacro extends AsyncCommand implements IMacro {
 
             if (mapping.hooks.length > 0) {
                 injector.map(commandClass).toValue(command);
-
                 ApplyHooks.call(mapping.hooks, injector);
-
                 injector.unmap(commandClass);
             }
         }
