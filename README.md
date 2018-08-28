@@ -198,5 +198,5 @@ This behaviour does not apply to parallel commands.
 
 This project is free, open-source software under the MIT license.
 
-Copyright (c) 2017 Ilya Malanin  
+Copyright (c) 2017-2018 Ilya Malanin  
 Copyright (c) 2011-2014 Alessandro Bianco   
